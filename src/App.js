@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom'
+import {Route, Switch,Router} from 'react-router-dom'
 import MovieList from './MovieList';
 import Mylist from './Mylist';
 import SearchList from './SearchList';
@@ -9,6 +9,7 @@ class App extends React.Component {
   render = () => {
     return (
       <>
+      <Switch>
         <Route
           exact
           path="/"
@@ -32,6 +33,7 @@ class App extends React.Component {
           path="/search"
           component={SearchList}
         />
+      </Switch>
       </>
     );
   }
