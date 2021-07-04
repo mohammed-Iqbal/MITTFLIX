@@ -51,7 +51,7 @@ class MovieList extends React.Component {
             <div className="title">
               <h1>{genre.name}</h1>
               <div className="titles-wrapper">
-                {this.state.movies.filter(m => m.genre_ids.indexOf(genre.id)>0).map((movie) => (
+                {this.state.movies.filter(m => m.genre_ids.indexOf(genre.id)>=0).map((movie) => (
                   <MovieItem key={movie.id} movie = {movie} getData={this.getData}/>
                 ))}
               </div>
