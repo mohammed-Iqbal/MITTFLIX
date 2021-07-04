@@ -29,7 +29,17 @@ class App extends React.Component {
           component={MovieDetail}
         />
 
-     
+        <Route
+          exact
+          path="/search/:key"
+          component={SearchList}
+        />
+
+        <Route
+          exact
+          path="/search"
+          component={SearchList}
+        />
       </>
     );
   }
