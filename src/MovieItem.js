@@ -29,19 +29,17 @@ class MovieItem extends React.Component {
   render() {
     return (
       <div className="movie">
-        <Link to={"/detail/"+this.props.movie.id}>
-          <img
-            src={this.props.movie.poster_path}
-          />
-          <div className="overlay">
-            <div className="title">{this.props.movie.title}</div>
-            <div className="rating">{this.props.movie.vote_average}/10</div>
-            <div className="plot">
-              {this.props.movie.overview}
-            </div>
+        <img
+          src={this.props.movie.poster_path}
+        />
+        <div className="overlay">
+          <div className="title">{this.props.movie.title}</div>
+          <div className="rating">{this.props.movie.vote_average}/10</div>
+          <div className="plot">
+            {this.props.movie.overview}
           </div>
-        </Link>
-        <div data-toggled={this.state.toggled} onClick={() => this.addMylist(this.props.movie.my_list)} className="listToggle">
+        </div>
+        <div data-toggled={this.state.toggled} onClick={() => this.addMylist(this.state.toggled)} className="listToggle">
           <div>
             <i className="fa fa-fw fa-plus"></i
             ><i className="fa fa-fw fa-check"></i>
