@@ -156,7 +156,7 @@
         878
       ],
       "id": 140607,
-      "my_list": false,
+      "my_list": true,
       "overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
       "poster_path": "https://image.tmdb.org/t/p/w500/9rd002JS49RwDW944fF1wjU8iTV.jpg",
       "title": "Star Wars: The Force Awakens",
@@ -242,7 +242,7 @@
         878
       ],
       "id": 181808,
-      "my_list": false,
+      "my_list": true,
       "overview": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
       "poster_path": "https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
       "title": "Star Wars: The Last Jedi",
@@ -256,7 +256,7 @@
         878
       ],
       "id": 181812,
-      "my_list": false,
+      "my_list": true,
       "overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.",
       "poster_path": "https://image.tmdb.org/t/p/w500/db32LaOibwEliAmSL2jjDF6oDdj.jpg",
       "title": "Star Wars: The Rise of Skywalker",
@@ -298,7 +298,7 @@
         878
       ],
       "id": 1893,
-      "my_list": false,
+      "my_list": true,
       "overview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
       "poster_path": "https://image.tmdb.org/t/p/w500/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
       "title": "Star Wars: Episode I - The Phantom Menace",
@@ -312,7 +312,7 @@
         878
       ],
       "id": 1895,
-      "my_list": false,
+      "my_list": true,
       "overview": "The evil Darth Sidious enacts his final plan for unlimited power -- and the heroic Jedi Anakin Skywalker must choose a side.",
       "poster_path": "https://image.tmdb.org/t/p/w500/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
       "title": "Star Wars: Episode III - Revenge of the Sith",
@@ -539,7 +539,7 @@
         878
       ],
       "id": 330459,
-      "my_list": false,
+      "my_list": true,
       "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
       "poster_path": "https://image.tmdb.org/t/p/w500/5jX3p0apUG5bkMHtnKZch0xpkBS.jpg",
       "title": "Rogue One: A Star Wars Story",
