@@ -2,6 +2,7 @@ import React from 'react';
 import * as MovieAPI from './MovieAPI';
 import {Link} from 'react-router-dom'
 
+
 class MovieItem extends React.Component {
   constructor() {
     super();
@@ -41,8 +42,8 @@ class MovieItem extends React.Component {
         </div>
         <div data-toggled={this.state.toggled} onClick={() => this.addMylist(this.state.toggled)} className="listToggle">
           <div>
-            <i className="fa fa-fw fa-plus"></i
-            ><i className="fa fa-fw fa-check"></i>
+            <i className="fa fa-fw fa-plus"></i>
+            <i className="fa fa-fw fa-check"></i>
           </div>
         </div>
       </div>
