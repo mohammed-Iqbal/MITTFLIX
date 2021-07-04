@@ -36,5 +36,4 @@ class MovieItem extends React.Component {
     );
   }
 }
-
 export default MovieItem;
