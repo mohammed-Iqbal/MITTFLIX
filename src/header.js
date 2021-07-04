@@ -10,12 +10,13 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    this.setState({searchkey: this.props.match.params.key});
+    this.setState({searchkey: ''});
   }
 
   search = (event) => {
     if(event.key == 'Enter'){
       this.props.history.push('/search/'+this.state.searchkey);
+      this.setState({searchkey: ''});
     }
   }
 
