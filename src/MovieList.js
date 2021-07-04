@@ -44,7 +44,7 @@ class MovieList extends React.Component {
   render() {
     return (
       <>
-        <Header />
+        <Header history={this.props.history} match={this.props.match}/>
 
         {this.state.genres.map((genre, i) => (
           <div className="titleList" key={i}>

@@ -1,32 +1,47 @@
 import React from 'react';
 import * as MovieAPI from './MovieAPI';
+import {Link} from 'react-router-dom'
 
 class MovieItem extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      toggled: true,
+    }
+  }
 
-  addMylist = (add) => {
+  componentDidMount() {
+    this.setState({toggled: this.props.movie.my_list});
+  }
+
+  addMylist = async (add) => {
     if(add) {
-      MovieAPI.removeFromList(this.props.movie);
+      await MovieAPI.removeFromList(this.props.movie);
     } else {
-      MovieAPI.addToList(this.props.movie);
+      await MovieAPI.addToList(this.props.movie);
+    }
+    this.setState({toggled: !this.state.toggled })
+    if(this.props.reload){
+      await this.props.reload();
     }
   }
 
   render() {
     return (
       <div className="movie">
-        <a href={"/detail/"+this.props.movie.id}>
+        <Link to={"/detail/"+this.props.movie.id}>
           <img
             src={this.props.movie.poster_path}
           />
           <div className="overlay">
-            <div className="title">Ant-Man</div>
-            <div className="rating">7.1/10</div>
+            <div className="title">{this.props.movie.title}</div>
+            <div className="rating">{this.props.movie.vote_average}/10</div>
             <div className="plot">
               {this.props.movie.overview}
             </div>
           </div>
-        </a>
-        <div data-toggled={this.props.movie.my_list} onClick={() => this.addMylist(this.props.movie.my_list)} className="listToggle">
+        </Link>
+        <div data-toggled={this.state.toggled} onClick={() => this.addMylist(this.props.movie.my_list)} className="listToggle">
           <div>
             <i className="fa fa-fw fa-plus"></i
             ><i className="fa fa-fw fa-check"></i>

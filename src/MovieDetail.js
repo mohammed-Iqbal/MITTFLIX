@@ -1,10 +1,12 @@
 import React from 'react';
 import * as MovieAPI from './MovieAPI';
+import Header from './header';
 
 class MovieDetail extends React.Component {
   constructor() {
     super();
     this.state = {
+      toggled: true,
       movie: {}
     }
   }
@@ -12,9 +14,10 @@ class MovieDetail extends React.Component {
   componentDidMount() {
     MovieAPI.getAll()
       .then((movies) => {
-        let movie = movies.find(m => m.id === this.props.match.params.id)
-        console.log(movie)
+        let movie = movies.find(m => m.id == this.props.match.params.id)
+        console.log(this.props.match.params.id)
         this.setState({movie: movie})
+        this.setState({toggled: movie.my_list});
       })
   }
 
@@ -24,31 +27,28 @@ class MovieDetail extends React.Component {
     } else {
       MovieAPI.addToList(this.state.movie);
     }
+    this.setState({toggled: !this.state.toggled })
   }
 
   render() {
-    console.log(this.state.movie)
     return (
-      <div className="movie">
-        {/*<a href={"/detail/"+this.state.movie.id}>
+      <>
+        <Header history={this.props.history} match={this.props.match}/>
+        <div className="details">
           <img
-            src={this.state.movie.poster_path}
+            src={this.state.movie.backdrop_path}
           />
-          <div className="overlay">
-            <div className="title">Ant-Man</div>
-            <div className="rating">7.1/10</div>
-            <div className="plot">
-              {this.state.movie.overview}
-            </div>
+          <div className="details-body">
+            <h1>{this.state.movie.title}</h1>
+            <div className="details-content">{this.state.movie.overview}</div>
+            {this.state.toggled ? (
+              <button class="removemylist" onClick={() => this.addMylist(this.state.movie.my_list)}>- Remove from watch list</button>
+            ) : (
+              <button className="addmylist" onClick={() => this.addMylist(this.state.movie.my_list)}>+ Add to watch list</button>
+            )}
           </div>
-        </a>
-        <div data-toggled={this.state.movie.my_list} onClick={() => this.addMylist(this.state.movie.my_list)} className="listToggle">
-          <div>
-            <i className="fa fa-fw fa-plus"></i
-            ><i className="fa fa-fw fa-check"></i>
-          </div>
-        </div>*/}
-      </div>
+        </div>
+      </>
     );
   }
 }
