@@ -12,6 +12,7 @@ class MovieList extends React.Component {
     }
   }
 
+  // creating movie list accroding to genres.
   componentDidMount() {
     this.getData();
   }

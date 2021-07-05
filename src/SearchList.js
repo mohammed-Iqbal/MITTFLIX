@@ -26,6 +26,7 @@ class MovieList extends React.Component {
   }
 
   render() {
+        //this.setState({searchkey: this.props.match.params.key});
     let searchkey = this.props.match.params.key ? this.props.match.params.key.toLowerCase() : "";
     return (
       <>

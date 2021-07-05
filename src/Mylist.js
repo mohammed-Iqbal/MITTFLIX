@@ -3,6 +3,7 @@ import * as MovieAPI from './MovieAPI';
 import Header from './header';
 import MovieItem from './MovieItem';
 
+//Implementing my list funtions.
 class MovieList extends React.Component {
   constructor() {
     super();
@@ -11,6 +12,7 @@ class MovieList extends React.Component {
     }
   }
 
+  //mounting data from api.
   componentDidMount() {
     MovieAPI.getAll()
       .then((movies) => {
@@ -25,6 +27,7 @@ class MovieList extends React.Component {
       })
   }
 
+  //saving my list data in local server.
   render() {
     return (
       <>
