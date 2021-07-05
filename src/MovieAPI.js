@@ -1,5 +1,7 @@
+//Api url
 const api = "http://localhost:3001"
 
+// fatching data from json
 export const getAll = () =>
   fetch(`${api}/movies`)
     .then(response => response.json())

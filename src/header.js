@@ -8,7 +8,7 @@ class Header extends Component {
       searchkey: ''
     }
   }
-
+//implementing search funtions
   componentDidMount() {
     this.setState({searchkey: ''});
   }
@@ -24,6 +24,7 @@ class Header extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  //using link router dom instead o (a herf)
   render() {
     return (
       <header className="header">

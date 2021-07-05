@@ -11,10 +11,12 @@ class MovieItem extends React.Component {
     }
   }
 
+  //mounting property 
   componentDidMount() {
     this.setState({toggled: this.props.movie.my_list});
   }
 
+  //calling data from api using await funtions.
   addMylist = async (add) => {
     if(add) {
       await MovieAPI.removeFromList(this.props.movie);
@@ -27,6 +29,8 @@ class MovieItem extends React.Component {
     }
   }
 
+  //showing movie data in homepage as poster.
+  //data are patching from local server.
   render() {
     return (
       <div className="movie">
