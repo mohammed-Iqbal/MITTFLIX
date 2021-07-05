@@ -30,6 +30,7 @@ class MovieList extends React.Component {
               sort.push(genres[i])
             }
           }
+          //search function will work with upper case and lower case.
           sort.sort((s1, s2) => {
             if(s1.name.toLowerCase() < s2.name.toLowerCase()) {
               return -1;
